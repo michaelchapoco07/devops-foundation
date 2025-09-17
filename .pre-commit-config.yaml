@@ -1,0 +1,15 @@
+default_language_version:
+  python: python3.9
+
+repos:
+  - repo: https://github.com/shellcheck-py/shellcheck-py
+    rev: v0.10.0.1
+    hooks:
+      - id: shellcheck
+        args: [--external-sources]
+
+  - repo: https://github.com/scop/pre-commit-shfmt
+    rev: v3.6.0-1
+    hooks:
+      - id: shfmt
+        args: [-i, "2", -w]
